@@ -24,44 +24,40 @@ This repository provides a production-ready healthcare claims data model with:
 ```sql
 -- 1. Security Setup (5 min)
 -- Run as ACCOUNTADMIN
-@scripts/01_security_setup.sql
+@ddl/snowflake_security_setup.sql
 
 -- 2. Create Database Schema (2 min)
 -- Run as SYSADMIN
-@scripts/02_healthcare_ddl.sql
+@ddl/healthcare_claims_ddl.sql
 
 -- 3. Load Sample Data (5 min)
 -- Run as healthcare_demo_admin_role
-@scripts/03_sample_data.sql
+@ddl/healthcare_sample_data.sql
 
 -- 4. Create Reporting Views (2 min)
-@scripts/04_reporting_views.sql
+@ddl/healthcare_reporting_views.sql
 ```
 
 ## 📁 Repository Structure
 
 ```
-healthcare-claims-db/
-├── scripts/
-│   ├── 01_security_setup.sql       # Roles, users, warehouse
-│   ├── 02_healthcare_ddl.sql       # Main schema creation
-│   ├── 02a_raw_schema_ddl.sql      # Optional RAW landing zone
-│   ├── 03_sample_data.sql          # 100 claims sample data
-│   └── 04_reporting_views.sql      # 15 analytical views
-├── data/
-│   ├── patients.csv                # 20 patient records
-│   ├── claims.csv                   # 100 claim headers
-│   └── ...                          # 17 CSV files total
-├── dbt/
-│   ├── models/
-│   │   ├── staging/                # RAW to staging transforms
-│   │   └── marts/                   # Business logic models
-│   └── dbt_project.yml
+HDB/
+├── README.md                        # This file
+├── ddl/
+│   ├── healthcare_claims_ddl.sql
+│   ├── healthcare_reporting_views.sql
+│   ├── healthcare_sample_data.sql
+│   ├── raw_schema_ddl.sql
+│   └── snowflake_security_setup.sql
 ├── docs/
-│   ├── dba_installation_guide.md   # DBA setup instructions
-│   ├── business_analyst_guide.md   # End-user documentation
-│   └── data_dictionary.md          # Complete column definitions
-└── README.md                        # This file
+│   ├── Healthcare Claims Database - Business Analyst User's Guide.pdf
+│   ├── Healthcare Claims Database - Data Dictionary.pdf
+│   ├── Healthcare Claims Database - Installation Guide for DBAs.pdf
+│   └── Healthcare CSV Data - README and Loading Instructions.pdf
+└── source_data/
+    ├── healthcare_csv_clinical_financial.txt
+    ├── healthcare_csv_encounters_claims.txt
+    └── healthcare_csv_patients_providers.txt
 ```
 
 ## 🏗️ Architecture
@@ -115,36 +111,37 @@ CSV Files → RAW Schema → dbt → Healthcare Schema → Reports
 
 1. **Clone Repository**
 ```bash
-git clone https://github.com/yourorg/healthcare-claims-db.git
-cd healthcare-claims-db
+git clone https://github.com/yourorg/HDB.git
+cd HDB
 ```
 
 2. **Run Security Setup**
 ```sql
 -- In Snowflake, as ACCOUNTADMIN
-!source scripts/01_security_setup.sql
+!source ddl/snowflake_security_setup.sql
 ```
 
 3. **Create Schemas**
 ```sql
 -- As SYSADMIN
-!source scripts/02_healthcare_ddl.sql
-!source scripts/02a_raw_schema_ddl.sql  -- Optional for ETL
+!source ddl/healthcare_claims_ddl.sql
+!source ddl/raw_schema_ddl.sql  -- Optional for ETL
 ```
 
 4. **Load Data** (choose one)
 ```sql
 -- Option A: Direct load
-!source scripts/03_sample_data.sql
+!source ddl/healthcare_sample_data.sql
 
--- Option B: CSV upload
-PUT file://data/*.csv @raw.csv_stage;
+-- Option B: CSV upload from source_data files
+-- Note: .txt files contain CSV data - extract and save as .csv first
+PUT file://source_data/*.csv @raw.csv_stage;
 -- Then run dbt
 ```
 
 5. **Create Views**
 ```sql
-!source scripts/04_reporting_views.sql
+!source ddl/healthcare_reporting_views.sql
 ```
 
 ### Verification
