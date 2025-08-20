@@ -2,6 +2,8 @@
 
 A comprehensive healthcare claims processing database for Snowflake, complete with sample data, ETL pipelines, and business intelligence views.
 
+# You can find the data model here: https://rayserrano2735.github.io/HDB_Model/
+
 ## 🎯 Overview
 
 This repository provides a production-ready healthcare claims data model with:
