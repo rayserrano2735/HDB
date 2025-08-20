@@ -187,23 +187,24 @@ ORDER BY denial_rate_pct DESC;
 ## 🛠️ Customization
 
 ### Adding More Sample Data
-Edit CSV files in `/data` directory maintaining foreign key relationships.
+Edit CSV content in `/source_data` files maintaining foreign key relationships. Extract CSV data from .txt files provided.
 
 ### Modifying Views
-Views are in `scripts/04_reporting_views.sql`. Add custom views:
+Views are in `ddl/healthcare_reporting_views.sql`. Add custom views:
 ```sql
 CREATE VIEW v_custom_metric AS
 SELECT ...
 ```
 
 ### Adjusting Security
-Modify roles in `scripts/01_security_setup.sql`.
+Modify roles in `ddl/snowflake_security_setup.sql`.
 
 ## 📚 Documentation
 
-- [DBA Installation Guide](docs/dba_installation_guide.md) - Technical setup
-- [Business Analyst Guide](docs/business_analyst_guide.md) - Using the database
-- [Data Dictionary](docs/data_dictionary.md) - Complete field definitions
+- [DBA Installation Guide](docs/Healthcare%20Claims%20Database%20-%20Installation%20Guide%20for%20DBAs.pdf)
+- [Business Analyst Guide](docs/Healthcare%20Claims%20Database%20-%20Business%20Analyst%20User's%20Guide.pdf)
+- [Data Dictionary](docs/Healthcare%20Claims%20Database%20-%20Data%20Dictionary.pdf)
+- [CSV Loading Instructions](docs/Healthcare%20CSV%20Data%20-%20README%20and%20Loading%20Instructions.pdf)
 
 ## ⚠️ Important Notes
 
