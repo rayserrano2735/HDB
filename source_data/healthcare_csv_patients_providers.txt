@@ -1,0 +1,77 @@
+### patients.csv ###
+patient_id,medical_record_number,first_name,last_name,date_of_birth,gender,ssn,address_line1,address_line2,city,state,zip_code,phone_number,email
+PAT001,MRN001,John,Smith,1975-03-15,M,123-45-6789,123 Main St,,Denver,CO,80201,303-555-0101,john.smith@email.com
+PAT002,MRN002,Mary,Johnson,1982-07-22,F,234-56-7890,456 Oak Ave,,Boulder,CO,80301,303-555-0102,mary.johnson@email.com
+PAT003,MRN003,Robert,Williams,1968-11-30,M,345-67-8901,789 Pine Rd,,Aurora,CO,80010,303-555-0103,robert.williams@email.com
+PAT004,MRN004,Patricia,Brown,1990-01-18,F,456-78-9012,321 Elm St,,Littleton,CO,80120,303-555-0104,patricia.brown@email.com
+PAT005,MRN005,Michael,Davis,1955-09-05,M,567-89-0123,654 Maple Dr,,Westminster,CO,80030,303-555-0105,michael.davis@email.com
+PAT006,MRN006,Linda,Miller,1978-04-12,F,678-90-1234,987 Cedar Ln,,Arvada,CO,80002,303-555-0106,linda.miller@email.com
+PAT007,MRN007,David,Wilson,1985-12-25,M,789-01-2345,147 Birch St,,Lakewood,CO,80214,303-555-0107,david.wilson@email.com
+PAT008,MRN008,Jennifer,Moore,1972-06-08,F,890-12-3456,258 Spruce Ave,,Parker,CO,80134,303-555-0108,jennifer.moore@email.com
+PAT009,MRN009,James,Taylor,1964-02-14,M,901-23-4567,369 Ash Rd,,Castle Rock,CO,80109,303-555-0109,james.taylor@email.com
+PAT010,MRN010,Barbara,Anderson,1988-10-20,F,012-34-5678,741 Willow Way,,Centennial,CO,80111,303-555-0110,barbara.anderson@email.com
+PAT011,MRN011,William,Thomas,1970-05-16,M,123-45-6780,852 Palm Dr,,Highlands Ranch,CO,80129,303-555-0111,william.thomas@email.com
+PAT012,MRN012,Susan,Jackson,1983-08-27,F,234-56-7891,963 Cypress St,,Englewood,CO,80110,303-555-0112,susan.jackson@email.com
+PAT013,MRN013,Charles,White,1959-03-03,M,345-67-8902,159 Magnolia Ave,,Greenwood Village,CO,80121,303-555-0113,charles.white@email.com
+PAT014,MRN014,Jessica,Harris,1992-11-11,F,456-78-9013,753 Sycamore Ln,,Lone Tree,CO,80124,303-555-0114,jessica.harris@email.com
+PAT015,MRN015,Thomas,Martin,1967-07-07,M,567-89-0124,357 Dogwood Dr,,Broomfield,CO,80020,303-555-0115,thomas.martin@email.com
+PAT016,MRN016,Sarah,Thompson,1979-09-19,F,678-90-1235,468 Hawthorn St,,Thornton,CO,80229,303-555-0116,sarah.thompson@email.com
+PAT017,MRN017,Christopher,Garcia,1986-01-26,M,789-01-2346,579 Juniper Ave,,Northglenn,CO,80233,303-555-0117,christopher.garcia@email.com
+PAT018,MRN018,Karen,Martinez,1974-04-30,F,890-12-3457,681 Hickory Rd,,Commerce City,CO,80022,303-555-0118,karen.martinez@email.com
+PAT019,MRN019,Daniel,Robinson,1961-12-15,M,901-23-4568,792 Walnut Way,,Brighton,CO,80601,303-555-0119,daniel.robinson@email.com
+PAT020,MRN020,Nancy,Clark,1987-06-23,F,012-34-5679,246 Chestnut Ln,,Federal Heights,CO,80260,303-555-0120,nancy.clark@email.com
+
+### providers.csv ###
+provider_id,npi,provider_type,first_name,last_name,specialty,tax_id,address_line1,address_line2,city,state,zip_code,phone_number
+PROV001,1234567890,Physician,Dr. Amanda,Chen,Internal Medicine,98-7654321,100 Medical Plaza,,Denver,CO,80202,303-555-1001
+PROV002,2345678901,Physician,Dr. Brian,Patel,Cardiology,87-6543210,200 Heart Center Dr,,Aurora,CO,80011,303-555-1002
+PROV003,3456789012,Physician,Dr. Carol,Rodriguez,Orthopedics,76-5432109,300 Bone & Joint Way,,Littleton,CO,80121,303-555-1003
+PROV004,4567890123,Physician,Dr. David,Kim,Emergency Medicine,65-4321098,400 ER Boulevard,,Denver,CO,80203,303-555-1004
+PROV005,5678901234,Physician,Dr. Emily,Johnson,Radiology,54-3210987,500 Imaging Center,,Boulder,CO,80302,303-555-1005
+PROV006,6789012345,Physician,Dr. Frank,Liu,Surgery,43-2109876,600 Surgical Tower,,Denver,CO,80204,303-555-1006
+PROV007,7890123456,Nurse Practitioner,Sarah,Williams,Family Practice,32-1098765,700 Family Care Ln,,Westminster,CO,80031,303-555-1007
+PROV008,8901234567,Physician,Dr. George,Brown,Pediatrics,21-0987654,800 Children Way,,Aurora,CO,80012,303-555-1008
+PROV009,9012345678,Physician Assistant,Michael,Davis,Urgent Care,10-9876543,900 Quick Care Rd,,Lakewood,CO,80215,303-555-1009
+PROV010,0123456789,Physician,Dr. Helen,Taylor,Oncology,09-8765432,1000 Cancer Center,,Denver,CO,80205,303-555-1010
+
+### facilities.csv ###
+facility_id,facility_name,facility_type,npi,tax_id,address_line1,address_line2,city,state,zip_code,phone_number
+FAC001,Denver General Hospital,Hospital,1122334455,11-2233445,1001 Hospital Way,,Denver,CO,80206,303-555-2001
+FAC002,Aurora Medical Center,Hospital,2233445566,22-3344556,2002 Medical Center Dr,,Aurora,CO,80013,303-555-2002
+FAC003,Boulder Community Clinic,Clinic,3344556677,33-4455667,3003 Community Health Rd,,Boulder,CO,80303,303-555-2003
+FAC004,Littleton Surgery Center,ASC,4455667788,44-5566778,4004 Surgery Plaza,,Littleton,CO,80122,303-555-2004
+FAC005,Westminster Urgent Care,Urgent Care,5566778899,55-6677889,5005 Urgent Lane,,Westminster,CO,80032,303-555-2005
+
+### insurance_plans.csv ###
+plan_id,payer_id,payer_name,plan_name,plan_type,group_number
+PLAN001,PAY001,Blue Cross Blue Shield,BCBS PPO Gold,PPO,GRP1001
+PLAN002,PAY002,United Healthcare,UHC HMO Silver,HMO,GRP2002
+PLAN003,PAY003,Aetna,Aetna Choice POS,POS,GRP3003
+PLAN004,PAY004,Cigna,Cigna Open Access,PPO,GRP4004
+PLAN005,PAY005,Kaiser Permanente,Kaiser HMO Bronze,HMO,GRP5005
+
+### patient_insurance.csv ###
+coverage_id,patient_id,plan_id,member_id,coverage_type,effective_date,termination_date,copay_amount,deductible_amount,out_of_pocket_max
+COV001,PAT001,PLAN001,BCBS001234,Primary,2024-01-01,2025-12-31,25.00,1000.00,5000.00
+COV002,PAT002,PLAN002,UHC002345,Primary,2024-01-01,2025-12-31,20.00,1500.00,6000.00
+COV003,PAT003,PLAN003,AET003456,Primary,2024-01-01,2025-12-31,30.00,2000.00,7000.00
+COV004,PAT004,PLAN004,CIG004567,Primary,2024-01-01,2025-12-31,35.00,1200.00,5500.00
+COV005,PAT005,PLAN005,KP005678,Primary,2024-01-01,2025-12-31,15.00,500.00,3000.00
+COV006,PAT006,PLAN001,BCBS006789,Primary,2024-01-01,2025-12-31,25.00,1000.00,5000.00
+COV007,PAT007,PLAN002,UHC007890,Primary,2024-01-01,2025-12-31,20.00,1500.00,6000.00
+COV008,PAT008,PLAN003,AET008901,Primary,2024-01-01,2025-12-31,30.00,2000.00,7000.00
+COV009,PAT009,PLAN004,CIG009012,Primary,2024-01-01,2025-12-31,35.00,1200.00,5500.00
+COV010,PAT010,PLAN005,KP010123,Primary,2024-01-01,2025-12-31,15.00,500.00,3000.00
+COV011,PAT011,PLAN001,BCBS011234,Primary,2024-01-01,2025-12-31,25.00,1000.00,5000.00
+COV012,PAT012,PLAN002,UHC012345,Primary,2024-01-01,2025-12-31,20.00,1500.00,6000.00
+COV013,PAT013,PLAN003,AET013456,Primary,2024-01-01,2025-12-31,30.00,2000.00,7000.00
+COV014,PAT014,PLAN004,CIG014567,Primary,2024-01-01,2025-12-31,35.00,1200.00,5500.00
+COV015,PAT015,PLAN005,KP015678,Primary,2024-01-01,2025-12-31,15.00,500.00,3000.00
+COV016,PAT016,PLAN001,BCBS016789,Primary,2024-01-01,2025-12-31,25.00,1000.00,5000.00
+COV017,PAT017,PLAN002,UHC017890,Primary,2024-01-01,2025-12-31,20.00,1500.00,6000.00
+COV018,PAT018,PLAN003,AET018901,Primary,2024-01-01,2025-12-31,30.00,2000.00,7000.00
+COV019,PAT019,PLAN004,CIG019012,Primary,2024-01-01,2025-12-31,35.00,1200.00,5500.00
+COV020,PAT020,PLAN005,KP020123,Primary,2024-01-01,2025-12-31,15.00,500.00,3000.00
+COV021,PAT001,PLAN002,UHC001SEC,Secondary,2024-01-01,2025-12-31,10.00,500.00,2500.00
+COV022,PAT005,PLAN003,AET005SEC,Secondary,2024-01-01,2025-12-31,15.00,750.00,3000.00
+COV023,PAT010,PLAN001,BCBS010SEC,Secondary,2024-01-01,2025-12-31,20.00,800.00,4000.00
